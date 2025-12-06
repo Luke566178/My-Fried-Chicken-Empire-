@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fried Chicken Empire</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Game Scripts -->
+    <script defer src="rare-chickens.js"></script>
+    <script defer src="game.js"></script>
+</head>
+
+<body>
+
+    <div id="game-container">
+
+        <h1 id="empireName">🍗 Fried Chicken Empire 🍗</h1>
+        <button id="editNameBtn">Edit Name</button>
+
+        <div id="stats">
+            <p id="bucketDisplay">Buckets: 0</p>
+            <p id="perClickDisplay">Per Click: 1</p>
+            <p id="perSecondDisplay">Per Second: 0</p>
+        </div>
+
+        <button id="chickenButton">🍗</button>
+
+        <h2>Upgrades</h2>
+        <div id="shop"></div>
+
+        <h2>Rebirth</h2>
+        <button id="rebirthBtn">Rebirth</button>
+        <p id="rebirthInfo"></p>
+
+        <h2>Settings</h2>
+        <button id="settingsBtn">⚙ Settings</button>
+
+        <div id="settingsMenu" class="hidden">
+            <h3>Settings</h3>
+            <label>Music Volume: <input type="range" id="musicSlider" min="0" max="1" step="0.01"></label><br>
+            <label>Animation Mode:
+                <select id="animationMode">
+                    <option value="low">Low</option>
+                    <option value="high">High</option>
+                </select>
+            </label><br>
+            <button id="closeSettings">Close</button>
+        </div>
+
+        <!-- OWNER MENU -->
+        <div id="ownerPanel" class="hidden">
+            <h2>OWNER MENU</h2>
+            <input id="customBuckets" type="number" placeholder="Buckets to add">
+            <button id="giveBuckets">Give Buckets</button>
+
+            <input id="customUpgrade" type="text" placeholder="Upgrade name">
+            <input id="customUpgradeAmount" type="number" placeholder="Amount">
+            <button id="giveUpgrade">Give Upgrade</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
