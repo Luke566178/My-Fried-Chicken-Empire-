@@ -1,0 +1,115 @@
+/* --- General Layout --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #fff8e1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+#game-container {
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* --- Buttons --- */
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f59e0b;
+    color: white;
+    font-size: 1rem;
+    transition: transform 0.1s, background 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #d97706;
+}
+
+/* --- Chicken Button --- */
+#chickenButton {
+    font-size: 5rem;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 10px 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    animation: float 1s ease-in-out infinite alternate;
+}
+
+/* Floating animation for chicken */
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(10deg); }
+    100% { transform: translateY(0) rotate(-10deg); }
+}
+
+/* --- Hidden UI --- */
+.hidden { display: none; }
+
+/* --- Settings Menu --- */
+#settingsMenu {
+    background: #fff3e0;
+    border: 2px solid #f59e0b;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* --- Owner Panel --- */
+#ownerPanel {
+    background: #e0f7fa;
+    border: 2px solid #00bcd4;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* --- Shop --- */
+#shop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.shop-item {
+    background: #fff8dc;
+    border: 1px solid #f59e0b;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 5px;
+    width: 130px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.2s;
+}
+
+.shop-item:hover {
+    transform: scale(1.05);
+    background: #fef3c7;
+}
+
+/* --- Falling emojis --- */
+.falling-emoji {
+    position: absolute;
+    font-size: 1.5rem;
+    pointer-events: none;
+    user-select: none;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(300px); opacity: 0; }
+}
